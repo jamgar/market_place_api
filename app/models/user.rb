@@ -5,7 +5,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  before_create :generate_authentication_token!
+  before_validation :generate_authentication_token!
 
   def generate_authentication_token!
     begin

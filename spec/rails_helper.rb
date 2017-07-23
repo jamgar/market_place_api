@@ -68,4 +68,5 @@ RSpec.configure do |config|
   config.include Devise::Test::ControllerHelpers, type: :controller
   # Including to test requests
   config.include Request::JsonHelpers, type: :controller
+  config.include Devise::Test::ControllerHelpers
 end
