@@ -24,7 +24,8 @@ gem 'puma', '~> 3.7'
 # gem 'rack-cors'
 
 # API gems
-gem 'active_model_serializers'
+# gem 'active_model_serializers'
+gem 'active_model_serializers', git: 'git@github.com:rails-api/active_model_serializers.git', branch: '0-8-stable'
 # Authentication gem
 gem 'devise'
 
