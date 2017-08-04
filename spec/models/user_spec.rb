@@ -18,6 +18,8 @@ RSpec.describe User, type: :model do
   it { should validate_confirmation_of(:password) }
   it { should allow_value('example@domain.com').for(:email) }
   it { should validate_uniqueness_of(:auth_token) }
+  it { should have_many(:products) }
+  it { should have_many(:orders) }
 
   it { should have_many(:products) }
 
