@@ -1,5 +1,7 @@
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 require 'spec_helper'
+require 'email_spec'
+
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../../config/environment', __FILE__)
 # Prevent database truncation if the environment is production
@@ -69,5 +71,8 @@ RSpec.configure do |config|
   # Including to test requests
   config.include Request::JsonHelpers, type: :controller
   config.include Request::HeadersHelpers, type: :controller
+
+  config.include(EmailSpec::Helpers)
+  config.include(EmailSpec::Matchers)
 
 end
